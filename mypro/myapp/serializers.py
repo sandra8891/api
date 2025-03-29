@@ -1,7 +1,12 @@
 from rest_framework import serializers
-from.models import Todo
+from .models import *
 
-class TodoSerializer(serializers.ModelSerializer):
+class sample(serializers.Serializer):
+    roll=serializers.IntegerField()
+    name=serializers.CharField()
+    age=serializers.IntegerField()
+
+class model_serializer(serializers.ModelSerializer):
     class Meta:
-        model=Todo
-        fields=['id','title']
+        model=student
+        fields='_all_'
