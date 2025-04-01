@@ -6,7 +6,8 @@ class sample(serializers.Serializer):
     name=serializers.CharField()
     age=serializers.IntegerField()
 
+
 class model_serializer(serializers.ModelSerializer):
     class Meta:
         model=student
-        fields='_all_'
+        fields='__all__'
